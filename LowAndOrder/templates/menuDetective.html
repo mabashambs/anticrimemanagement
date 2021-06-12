@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+    .header {
+      padding: 30px;
+      padding-right: 47px;
+      text-align: center;
+      background: black;
+      color: white;
+    }
+    .navbar-brand {
+      background-color:blue;
+      color: white;
+    }
+    body{
+      background: url(https://cdn.pixabay.com/photo/2016/11/21/00/26/philatelist-1844080_1280.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Style the topnav links */
+      #navbarSupportedContent a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 12px 30px;
+      text-decoration:none;
+    }
+    #navbarSupportedContent a:hover {
+      background-color: #000;
+      color: white;
+    }
+    .rightcolumn {
+  float: right;
+  width: 32%;
+  background-color: #f1f1f1;
+  padding-left: 30px;
+}
+    .card {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+    @media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+.fakeimg {
+  background-color: black;
+  width: 100%;
+  padding: 20px;
+}
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+  </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>ANTI-CRIME MANAGEMENT SYSTEM</h1>
+      <p>To reduce criminal activities..</p>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://www.aiacb.com/">
+  <img src="{%static "images/brand2.jpg"%}" alt="" height="45px" width="45px">
+  </a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/index/">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          VIEW COMPLAINTS
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/detectiveviewcomplients/">VIEW COMPLAINTS</a>
+        </div>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          CRIMINAL INFO
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/addcriminal/">ADD CRIMINAL</a>
+          <a class="dropdown-item" href="/viewcriminal/">VIEW CRIMINAL</a>
+          <a class="dropdown-item" href="/deletecriminal/">DELETE CRIMINAL</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          COMPLAINT STATUS
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="/statusDetec/">COMPLAINTS STATUS</a>
+          <a class="dropdown-item" href="/detecreport/">COMPLAINTS REPORT</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/index/">LOGOUT <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</body>
+</html>

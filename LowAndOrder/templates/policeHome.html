@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style media="screen">
+    
+    </style>
+   </head>
+<body>
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+{% include 'manuPolice.html' %}
+<div align="center" ><img src="{% static 'images/police.jpg' %}"></div>
+<div align="center" >
+    <font face=" Arial Black" size="8">{{ msg }}</font>
+</div></body>
+</html></doctype>

@@ -1,0 +1,101 @@
+{% load staticfiles %}
+<doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   </head>
+  <body>
+
+{% load staticfiles %}
+
+
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+{% include 'manuPolice.html' %}
+<form action="/savecom/" method="post">
+    {% csrf_token %}
+<table align="center">
+    <tr>
+         <th colspan="2"><center><font size="6" face="Arial Black">
+            Register Complent</font></center>
+        </th>
+    </tr>
+    <tr>
+        <th>
+        Citizen_Name:
+        </th>
+        <th>
+            <input type="text" name="name" required>
+        </th>
+    </tr>
+     <tr>
+        <th>
+        Date & Time:
+        </th>
+        <th>
+            <input type="datetime-local"  name="date" required>
+        </th>
+    </tr>
+     <tr>
+        <th>
+        Complent_Type:
+        </th>
+        <th>
+            <select name="complent_type">
+                <option>Missing Complent</option>
+                <option>Murder</option>
+                <option>Half Murder</option>
+                <option>Theft  </option>
+                <option>Harassment  </option>
+                <option>Inappropriate Behavior</option>
+            </select>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            Description:
+        </th>
+        <th>
+            <input type="text" name="description" required width="25" height="25">
+        </th>
+    </tr>
+    <tr>
+        <th>
+            Proof:
+        </th>
+        <th>
+            <input type="file" name="proof" required>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            Location:
+        </th>
+        <th>
+            <input type="text" name="location" required>
+        </th>
+    </tr>
+    <tr>
+
+        <th>
+            Station_id:
+        </th>
+        <th>
+            <input type="number" name="s_id" required>
+
+        </th>
+    </tr>
+<tr>
+    <th colspan="2"><center>
+        <button  type="submit"> Register</button>
+    </center>
+    </th>
+</tr>
+</table>
+</form>
+</body>
+</html></doctype>

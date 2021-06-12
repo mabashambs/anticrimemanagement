@@ -1,0 +1,33 @@
+step1 : u need to activate the 	virtual environment
+
+goto env folder ,,
+again scripts folder,, 
+now open this location in the cmd
+u need to run the activate.bat file
+--------------
+cd.. (out side of scripts)
+cd.. (out side of env)
+cd LowAndOrder
+-----------------------
+
+step2 : py manage.py makemigrations
+
+genarating SQL quiries
+-----------------------------
+
+
+step3 : py manage.py migrate
+
+run the quirues to create database tables
+
+
+--------------------
+step4: py manage.py runserver
+
+activating or running the server
+
+
+----------------------
+step5 : open this location in the browser
+
+http://127.0.0.1:8000/index

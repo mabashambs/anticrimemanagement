@@ -1,0 +1,42 @@
+#Anti-Crime Management System
+
+
+#The main  objective of this system is to provide a better interaction between public and police officers. 
+#This pyhton project makes work easier for the police department by maintaining the information and records regarding their department. 
+#This automation web project provides the setting for the intelligence platforms that agencies use to take incoming.
+
+------------------
+Modules:
+------------------
+
+Administrator: This module is completely under the control of Administrator. He is having authority to view all the users, 
+adding new police officers, deleting the police officers, adding new police stations, generating reports ,
+deleting the police stations and Appointing of police officers to a particular police station which is present in a specific zone or 
+to a specific district.
+
+Police Officers: Appointing the Police Officers to a particular police station which is present in a specific zone 
+or to a specific district as a first time setup, Police officers will assignor tasks to detective ,The requests notified 
+by the public are accepted or rejected by officers. Maintaining the criminal information state wise/area wise is mandatory.
+
+Detectives: Detectives can access the cases or tasks assigned by the police officers, view cases or tasks assigned.
+Detective can view the cases list assigned by the officers. Detectives can also view the criminal information
+
+Citizen: Secured enrollment of national is required where they
+have to give evidence of citizenship, which will becross checked by the cops of that territory. 
+Nativesought to have the capacity to apply for different licenses like Arms, uproarious speaker,
+Hotel/hold up, perusing focus, mass gatherings etc..,
+--------------------------------------------------
+Software Requirements:
+
+Front-end : UI Technologies (HTML, CSS, JS)
+Back-end : Python
+Frameworks : Django
+Database : MySQL,Sqlite3
+___________
+
+Hardware Requirements:
+
+• Intel i3 (Processor)
+• 2GB Ram
+• 4 MB Cache Memory
+• Hard disk 500 GB

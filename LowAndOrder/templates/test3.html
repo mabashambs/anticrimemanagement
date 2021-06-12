@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+    .mySlides {
+  display:none;
+  height: 400px;
+
+}
+    .header {
+      padding: 30px;
+      text-align: center;
+      background: black;
+      color: white;
+    }
+    .navbar-brand {
+      background-color:blue;
+      color: white;
+    }
+
+    /* Style the topnav links */
+      #navbarSupportedContent a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 12px 45px;
+      text-decoration:none;
+    }
+    #navbarSupportedContent a:hover {
+      background-color: #000;
+      color: white;
+    }
+    .rightcolumn {
+  float: right;
+  width: 32%;
+  background-color: #f1f1f1;
+  padding-left: 30px;
+}
+    .card {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+    @media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+.fakeimg {
+  background-color: black;
+  width: 100%;
+  padding: 20px;
+}
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+  </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>ANTI-CRIME MANAGEMENT SYSTEM</h1>
+      <p>To reduce criminal activities..</p>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://www.aiacb.com/">
+  <img src="{%static "images/brand2.jpg"%}" alt="" height="45px" width="45px">
+  </a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/index">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/adminlogin">ADMIN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/policelogin">POLICE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/detectivelogin">DETECTIVE</a>
+      </li>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/citizenlogin" tabindex="-1" aria-disabled="true">CITIZEN</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<left>
+        <img src="{% static 'images/logo3.jpg' %}" id="img"   width="1010" height="520"></left>
+    <div class="rightcolumn">
+        <div class="card">
+          <h2 align="center">STOP CRIME</h2>
+          <div class="w3-content w3-section" style="max-width:500px">
+              <img class="mySlides" src="{%static "images/crime2.jpg"%}" style="width:100%">
+              <img class="mySlides" src="{%static "images/crime1.jpg"%}" style="width:100%">
+              <img class="mySlides" src="{%static "images/index.jpg"%}" style="width:100%">
+              <img class="mySlides" src="{%static "images/crime3.png"%}" style="width:100%">
+          </div>
+          &nbsp
+          <p>For the elemination of violence againest WOMEN...</p>
+</div>
+        <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
+</body>
+
+</html>

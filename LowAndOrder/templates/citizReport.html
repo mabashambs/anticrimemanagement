@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="#ffe4c4">
+{% include 'menuCitizen.html' %} <br>
+  <form action="/findcitizreport/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center" >
+
+        <th colspan="10"><center><font size="6" face="Arial Black">
+           Report</font></center>
+        </th>
+        <tr>
+            <th>Complete Status</th>
+            <th>
+               <select name="status">
+                <option>Opened</option>
+                <option>In Process</option>
+                <option>Pendding</option>
+                <option>Closed</option>
+            </select>
+            </th>
+        </tr>
+        <tr><th colspan="2"><button type="submit" style="background:black;" class="btn btn-primary">Search Report</button> </th></tr>
+    </table>
+</form>
+<br>
+<br>
+<center>
+
+<table align="centre" bgcolor="#fffafa" border="2" style="background-color: aquamarine">
+ <tr>
+        <th colspan="10"><center><font size="6" face="Arial Black">
+           Complente Details</font></center>
+        </th>
+    <tr>
+        <th>Complent_Id</th>
+        <th>Complent_type</th>
+        <th>Complient_Name</th>
+        <th>Complent_Date</th>
+        <th>Complent_Discription</th>
+        <th>Station_id</th>
+        <th>Locaton</th>
+        <th>Status</th>
+
+        </tr>
+    {%  for x in data %}
+    <tr>
+        <th>{{ x.complent_id }}</th>
+        <th>{{ x.complent_type }}</th>
+        <th>{{ x.complient_name }}</th>
+        <th>{{ x.date_of_complent }}</th>
+        <th>{{ x.description }}</th>
+        <th>{{ x.station_id }}</th>
+        <th>{{ x.location }}</th>
+        <th>{{ x.status }}</th>
+
+        </tr>
+    {% endfor %}
+</table></center>
+<br>
+<br>
+<center>
+    <font size="6" >
+        <a href="/index/" style="background:black;" class="btn btn-primary btn-lg">Home</a></font>
+</center>
+
+</body>
+</html>

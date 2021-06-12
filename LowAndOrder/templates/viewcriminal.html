@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   </head>
+  <body>
+
+{% load staticfiles %}
+
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+{% include 'menuDetective.html' %} <br>
+<center>
+<table align="centre" bgcolor="#fffafa" border="2">
+ <tr>
+        <th colspan="5"><center><font size="6" face="Arial Black">
+            Criminal Details</font></center>
+        </th>
+    <tr>
+        <th>Criminal_Id</th>
+        <th>Criminal_Name</th>
+        <th>Crime</th>
+        <th>Image</th>
+        </tr>
+    {%  for x in object_list %}
+    <tr>
+        <th>{{ x.criminal_id }}</th>
+        <th>{{ x.criminal_name }}</th>
+        <th>{{ x.crime }}</th>
+        <th>{{ x.img }}</th>
+        </tr>
+    {% endfor %}
+</table></center>
+</body>
+</html></doctype>

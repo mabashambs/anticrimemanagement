@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   </head>
+  <body>
+
+{% load staticfiles %}
+
+
+
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+{% include 'manuPolice.html' %}<br>
+<center>
+<table align="centre" bgcolor="#fffafa" border="2">
+ <tr>
+        <th colspan="5"><center><font size="5" face="Arial Black">
+            Detective Details</font></center>
+        </th>
+    <tr>
+        <th>Detective_Id</th>
+        <th>Detective_Name</th>
+        <th>Date_Of_Birth</th>
+        <th>Mobile_no</th>
+        </tr>
+    {%  for x in object_list %}
+    <tr>
+        <th>{{ x.detective_id }}</th>
+        <th>{{ x.detective_name }}</th>
+        <th>{{ x.date_of_birth }}</th>
+        <th>{{ x.mobile_no }}</th>
+        </tr>
+    {% endfor %}
+</table></center>
+</body>
+</html></doctype>
